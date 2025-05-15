@@ -1,0 +1,339 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+:root {
+  --cor-fundo: #f8f4ef;
+  --cor-texto: #5c4b43;
+  --cor-accent: #e3b8a0;
+  --cor-accent-hover: #dcae92;
+  --cor-dark: #3f2e2e;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Lato', sans-serif;
+}
+
+body {
+  font-family: var(--font-serif);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* CONTAINER CENTRALIZADO */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* HEADER */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e8e3dc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logonr {
+  height: 80px;
+  width: auto;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--cor-texto);
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: var(--cor-accent);
+  border-bottom: 2px solid var(--cor-accent);
+}
+
+/* BOTÃO AGENDAR */
+.botao-agendar {
+  background: var(--cor-accent);
+  color: var(--cor-dark);
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao-agendar:hover {
+  background: var(--cor-accent-hover);
+}
+
+/* HERO */
+.hero {
+  background: var(--cor-accent-hover);
+  color: var(--cor-dark);
+  text-align: center;
+  padding: 6rem 1.5rem;
+  font-family: var(--font-serif);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* BOTÃO CHAMADA */
+.botao-chamada {
+  background: var(--cor-dark);
+  color: var(--cor-fundo);
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.botao-chamada:hover {
+  background: var(--cor-accent);
+  color: var(--cor-dark);
+}
+
+/* SEÇÕES */
+.secao {
+  padding: 4rem 1.5rem;
+  background: #fff;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.05);
+}
+
+.secao h2 {
+  font-family: var(--font-serif);
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--cor-dark);
+}
+
+/* SOBRE */
+.sobre .botao-toggle {
+  display: block;
+  margin: 0 auto 1.5rem;
+  background: var(--cor-accent);
+  color: var(--cor-dark);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease;
+}
+
+.sobre .botao-toggle:hover {
+  background: var(--cor-accent-hover);
+}
+
+.conteudo-escondido {
+  display: none;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.conteudo-escondido.ativo {
+  display: flex;
+}
+
+.img-tatuando img {
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+  max-width: 350px;
+  width: 100%;
+}
+
+.texto {
+  max-width: 550px;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--cor-texto);
+  text-align: left;
+}
+
+/* FLASHES */
+.carrossel-flashes {
+  position: relative;
+  max-width: 280px;
+  margin: 0 auto;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 0.1);
+}
+
+.carrossel-flashes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+/* LOJA */
+.produtos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.produto {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgb(0 0 0 / 0.1);
+  max-width: 220px;
+  text-align: center;
+  font-family: var(--font-sans);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.produto img {
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.produto h3 {
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.produto p {
+  margin: 0.5rem 0 1rem 0;
+  font-weight: 700;
+  color: var(--cor-accent);
+}
+
+.btn-whatsapp {
+  background: var(--cor-accent);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  color: var(--cor-dark);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background: var(--cor-accent-hover);
+}
+
+/* CONTATO */
+.contato {
+  text-align: center;
+  font-family: var(--font-sans);
+}
+
+.botao-contato {
+  background: var(--cor-accent);
+  color: var(--cor-dark);
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.botao-contato:hover {
+  background: var(--cor-accent-hover);
+}
+
+/* FOOTER */
+.footer {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  color: var(--cor-texto);
+  border-top: 1px solid #e8e3dc;
+}
+
+.redes a {
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+.redes img {
+  width: 30px;
+  filter: grayscale(0.5);
+  transition: filter 0.3s ease;
+}
+
+.redes img:hover {
+  filter: grayscale(0);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu {
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .carrossel-flashes {
+    height: 250px;
+  }
+
+  .produtos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .conteudo-escondido {
+    flex-direction: column;
+  }
+}
